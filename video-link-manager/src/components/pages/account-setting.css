@@ -1,0 +1,15 @@
+
+.account-setting-wrapper {
+    display: flex;
+}
+
+.account-setting-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.delete-account-wrapper {
+    margin-top: 45px;
+}

@@ -1,0 +1,21 @@
+.app {
+    min-width: 100vw;
+    background: #e53935;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+    margin-top: 80px;
+    border-radius: 100px 100px 0 0;;
+}
+
+.link {
+    color:black;
+    text-decoration: none;
+}

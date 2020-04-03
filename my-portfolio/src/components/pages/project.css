@@ -1,0 +1,126 @@
+.project-container {
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    margin-top: 20px;
+}
+
+.project-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: larger;
+}
+
+.project-main h1 {
+    padding-bottom: 15px;
+    padding-left: 15px;
+}
+
+.project-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid rgba(142, 142, 142, 0.27);
+}
+
+.project-item {
+    width: 250px;
+    height: 250px;
+    margin: 60px 20px 20px 20px;
+    box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.55);
+    border-radius: 4px;
+}
+
+
+.project-item-image {
+    height: 60%;
+    border-radius: 5px 5px 0 0px;
+}
+
+.project-name {
+    color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+}
+
+.project-one {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/time-table.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-two {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/time-table-api.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-three {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/link-manager.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-four {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/flask.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-five {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/smms.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+
+.project-item-detail {
+    background-color: rgba(255, 255, 255, 0.934);
+    height: 40%;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.project-item-detail p {
+    height: 65%;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.project-link-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35%;
+    border-radius: 0px 0px 5px 5px;
+    border-top: 1px solid rgba(220, 220, 220, 0.578);
+
+}
+
+.project-link {
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+
+.project-link:hover {
+    color: rgba(255, 119, 0, 0.763);
+}
+
+.project-link-container a {
+    padding: 10px;
+}
+
+.project-link-container span {
+    color: rgba(181, 181, 181, 0.646);
+}
+
+.font-awesome {
+    padding-right: 2px;
+}
+
+@media (max-width: 600px) {
+    .project-main h1 {
+        font-size: 30px;
+    }
+}

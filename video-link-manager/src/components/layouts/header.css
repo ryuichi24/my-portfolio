@@ -1,0 +1,111 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-size: larger;
+}
+
+.header-container div {
+    color: rgba(255, 255, 255, 0.845);
+}
+
+.brand {
+    margin-left: 40px;
+}
+
+.nav-item-container {
+    display: flex;
+    margin-right: 40px;
+}
+
+.nav-item {
+    margin: 0 10px;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.nav-item:hover {
+    color: rgba(0, 0, 0, 0.66) !important;
+}
+
+
+.link {
+    text-decoration: none;
+}
+
+.menu-btn {
+    display: none;
+    margin: 50px;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.menu-btn:hover {
+    cursor: pointer;
+}
+
+.hamburger {
+    width: 38px;
+    height: 32px;
+}
+
+
+.nav-hidden {
+    display: none;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.907);
+    position: fixed;
+    right: 0;
+    top: 0;
+    float: right;
+    width: 50%; /* Full width */
+    height: 100%;
+    overflow: auto;
+}
+
+.nav-item-hidden-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    justify-content: space-between;
+    height: 300px;
+}
+
+.nav-item-hidden {
+    color: rgba(0, 0, 0, 0.66) !important;
+    transition: ease-in-out;
+    transition-duration: 0.3s;
+}
+
+.nav-item-hidden:hover {
+    color: tomato !important;
+}
+
+.close {
+    position: absolute;
+    font-size: 30px;
+    right: 30px;
+    top: 10px;
+    color: rgba(0, 0, 0, 0.66) !important;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.logout {
+    cursor: pointer;
+}
+
+
+@media (max-width: 700px) {
+    .nav-item-container {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}

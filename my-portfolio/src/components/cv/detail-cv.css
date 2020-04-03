@@ -1,0 +1,73 @@
+.detail-cv-container {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 650px;
+    margin: 0 30px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 3px 3px rgba(128, 128, 128, 0.55);
+    padding: 30px;
+}
+
+.detail-cv-work-container {
+    margin-top: 10px;
+}
+
+.detail-cv-skill-container {
+    margin-top: 10px;
+}
+
+.education {
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-content {
+    width: 350px;
+}
+
+.work {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-content {
+    width: 350px;
+}
+
+.skill {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.skill-content {
+    width: 350px;
+}
+
+li {
+    margin: 2px;
+}
+
+
+@media (max-width: 1000px) {
+    .detail-cv-container {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 770px) {
+    .detail-cv-container {
+        width: 90%;
+    }
+
+    .education-content,
+    .work-content,
+    .skill-content {
+        width: 200px;
+    }
+
+    .detail-cv-container {
+        font-size: 12px;
+    }
+}

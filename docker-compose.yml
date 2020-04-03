@@ -1,0 +1,42 @@
+version: "3"
+services:
+
+  #flask api
+  flask:
+    image: ryuichi24/flask-api-viket:latest
+    restart: always
+    container_name: flask
+    environment:
+      SECRET_KEY: love-programming
+      JWT_SECRET_KEY: love-programming-jwt
+      DATABASE_URL: mysql+pymysql://viket:love-programming@mysql/viketdb
+    command: /bin/sh -c "./boot.sh"
+    ports:
+      - 5002:5000
+
+  #react and proxy
+  react:
+    build:
+      context: ./video-link-manager
+      dockerfile: Dockerfile
+      args:
+        - API_URL=http://localhost:3000
+    image: ryuichi24/react-viket:latest
+    restart: always
+    ports:
+      - 3000:88
+
+  #MySQL database
+  mysql:
+    image: mysql:latest
+    restart: always
+    container_name: mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql-auth.cnf:/etc/mysql/conf.d/mysql-auth.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: love-programming
+      MYSQL_DATABASE: viketdb
+      MYSQL_USER: viket
+      MYSQL_PASSWORD: love-programming

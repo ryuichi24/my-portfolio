@@ -1,0 +1,111 @@
+.time-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.module-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(224, 250, 255);
+    width: 140px;
+    height: 140px;
+    margin: 20px;
+    border-radius: 70px;
+    box-shadow: 2px 2px 4px gray;
+    font-size: 13px;
+}
+
+.day {
+    width: 180px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+.user-filter {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+
+.table-form-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35vh;
+}
+
+.table-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 5px 5px 10px gray;
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .table-form-wrapper {
+        height: 300px;
+        width: 290px;
+        font-size: 13px;
+    }
+}
+
+.table-form-wrapper form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+.time-table-input-wrapper {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 6px;
+    background-color: rgb(232, 235, 235);
+}
+
+.time-table-input-wrapper:nth-child(1),
+.time-table-input-wrapper:nth-child(2),
+.time-table-input-wrapper:nth-child(3) {
+    padding-left: 9px;
+}
+
+
+.time-table-input {
+    font-size: 16px;
+    width: 100%;
+    background-color: rgb(232, 235, 235);
+    border: none;
+    outline: none;
+    padding-left: 5px;
+}
+
+
+.success-message {
+    color: rgb(35, 255, 23)
+}
+
+
+.greeting {
+    margin-left:30px;
+    margin-bottom: 40px;
+}
+
+.del-module-btn {
+    color: rgb(255, 81, 96);
+    margin-top: 3px;
+    padding: 3px;
+    height: 20px;
+    border-radius: 5px;
+}

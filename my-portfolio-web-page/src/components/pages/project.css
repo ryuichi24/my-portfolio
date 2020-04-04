@@ -75,6 +75,12 @@
     background-size: cover;
 }
 
+.project-six {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/docker-compose.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 
 .project-item-detail {
     background-color: rgba(255, 255, 255, 0.934);

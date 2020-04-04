@@ -1,21 +1,9 @@
 version: "3"
 services:
 
-  #flask api
-  flask:
-    image: ryuichi24/flask-api-viket:latest
-    restart: always
-    container_name: flask
-    environment:
-      SECRET_KEY: love-programming
-      JWT_SECRET_KEY: love-programming-jwt
-      DATABASE_URL: mysql+pymysql://viket:love-programming@mysql/viketdb
-    command: /bin/sh -c "./boot.sh"
-    ports:
-      - 5002:5000
 
-  #react and proxy
-  react:
+  #video link manager
+  react-app-1:
     build:
       context: ./video-link-manager
       dockerfile: Dockerfile
@@ -24,7 +12,50 @@ services:
     image: ryuichi24/react-viket:latest
     restart: always
     ports:
-      - 3000:88
+      - 3000:81
+
+  #flask api for video link manager
+  flask:
+    image: ryuichi24/flask-api-viket:latest
+    restart: always
+    container_name: flask
+    environment:
+      SECRET_KEY: love-programming
+      JWT_SECRET_KEY: love-programming-jwt
+      DATABASE_URL: mysql+pymysql://ryuichi:love-programming@mysql/ryuichiDb
+    command: /bin/sh -c "./boot.sh"
+    ports:
+      - 5001:5000
+
+
+  #time table manager
+  react-app-2:
+    build:
+      context: ./time-table-manager
+      dockerfile: Dockerfile
+      args:
+        - API_URL=http://localhost:3010
+    image: ryuichi24/react-time-table-manager:latest
+    restart: always
+    ports:
+      - 3010:82
+
+  #express api for time table manager
+  express:
+    image: ryuichi24/express-api-time-table-manager
+    restart: always
+    container_name: express
+    environment:
+      PORT: 5010
+      DB_PASS: love-programming
+      DB_USER: ryuichi
+      MYSQL_DB: ryuichiDb
+      DB_HOST: mysql
+      DB_PORT: 3306
+      JWT_KEY: love-programming
+    ports:
+      - 5002:5010
+
 
   #MySQL database
   mysql:
@@ -35,8 +66,9 @@ services:
       - 3306:3306
     volumes:
       - ./mysql-auth.cnf:/etc/mysql/conf.d/mysql-auth.cnf
+      - ./time-table-manager.sql:/docker-entrypoint-initdb.d/time-table-manager.sql
     environment:
       MYSQL_ROOT_PASSWORD: love-programming
-      MYSQL_DATABASE: viketdb
-      MYSQL_USER: viket
+      MYSQL_DATABASE: ryuichiDb
+      MYSQL_USER: ryuichi
       MYSQL_PASSWORD: love-programming

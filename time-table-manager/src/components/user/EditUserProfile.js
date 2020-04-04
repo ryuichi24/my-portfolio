@@ -16,7 +16,7 @@ const EditUserProfile = () => {
     const [errorMessage, setErrorMessage] = useState('');
 
     // const { } = useContext(UserContext);
-    const updateProfile = (newName, newEmail) => {
+    const updateProfile = () => {
 
         const options = {
             method: 'PATCH',

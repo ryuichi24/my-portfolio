@@ -1,4 +1,4 @@
-FROM node:alpine as builder
+FROM node:13-alpine as builder
 WORKDIR /app
 COPY ./package.json ./
 COPY ./package-lock.json ./
@@ -15,7 +15,7 @@ RUN npm run build
 FROM nginx:alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY nginx-react.conf /etc/nginx/conf.d/default.conf
-EXPOSE 88
+EXPOSE 82
 
 ENTRYPOINT ["nginx"]
 CMD ["-g", "daemon off;"]

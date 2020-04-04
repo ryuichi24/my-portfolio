@@ -1,6 +1,19 @@
 version: "3"
 services:
 
+  #web page for my portfolio
+  react-web-page:
+    build:
+      context: ./my-portfolio-web-page
+      dockerfile: Dockerfile
+      args:
+        - PROJECT_URL_ONE=http://localhost:3010
+        - PROJECT_URL_TWO=http://localhost:3020
+    image: ryuichi24/react-web-page:latest
+    restart: always
+    ports:
+      - 3000:80
+
 
   #video link manager
   react-app-1:
@@ -8,11 +21,11 @@ services:
       context: ./video-link-manager
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:3000
+        - API_URL=http://localhost:3010
     image: ryuichi24/react-viket:latest
     restart: always
     ports:
-      - 3000:81
+      - 3010:81
 
   #flask api for video link manager
   flask:
@@ -23,6 +36,7 @@ services:
       SECRET_KEY: love-programming
       JWT_SECRET_KEY: love-programming-jwt
       DATABASE_URL: mysql+pymysql://ryuichi:love-programming@mysql/ryuichiDb
+      CLIENT_ORIGIN: http://localhost:3010
     command: /bin/sh -c "./boot.sh"
     ports:
       - 5001:5000
@@ -34,11 +48,11 @@ services:
       context: ./time-table-manager
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:3010
+        - API_URL=http://localhost:3020
     image: ryuichi24/react-time-table-manager:latest
     restart: always
     ports:
-      - 3010:82
+      - 3020:82
 
   #express api for time table manager
   express:
@@ -53,6 +67,7 @@ services:
       DB_HOST: mysql
       DB_PORT: 3306
       JWT_KEY: love-programming
+      CLIENT_ORIGIN: http://localhost:3020
     ports:
       - 5002:5010
 

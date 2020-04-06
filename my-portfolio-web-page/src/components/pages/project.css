@@ -22,11 +22,12 @@
     flex-wrap: wrap;
     justify-content: center;
     border-top: 1px solid rgba(142, 142, 142, 0.27);
+    margin-bottom: 40px;
 }
 
 .project-item {
-    width: 250px;
-    height: 250px;
+    width: 245px;
+    height: 245px;
     margin: 60px 20px 20px 20px;
     box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.55);
     border-radius: 4px;
@@ -46,25 +47,25 @@
 }
 
 .project-one {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/time-table.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.project-two {
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/time-table-api.jpg");
-    background-position: center;
-    background-size: cover;
-}
-
-.project-three {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/link-manager.png");
     background-position: center;
     background-size: cover;
 }
 
-.project-four {
+.project-two {
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/flask.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-three {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/time-table.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.project-four {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/time-table-api.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -80,7 +81,6 @@
     background-position: center;
     background-size: cover;
 }
-
 
 .project-item-detail {
     background-color: rgba(255, 255, 255, 0.934);

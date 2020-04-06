@@ -31,9 +31,7 @@
 
 .menu-btn {
     display: none;
-    margin: 50px;
-    transition: ease-in-out;
-    transition-duration: 0.5s;
+    margin: 35px;
 }
 
 .menu-btn:hover {

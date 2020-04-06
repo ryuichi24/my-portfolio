@@ -10,5 +10,12 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width:950px;
+    width: 950px;
+}
+
+
+@media (max-width: 770px) {
+    .cv-main {
+        width: 500px;
+    }
 }

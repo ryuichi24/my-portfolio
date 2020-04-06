@@ -21,7 +21,7 @@ services:
       context: ./video-link-manager
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:89/video-link-manager
+        - API_URL=http://ryuichi24.com:89/video-link-manager
     image: ryuichi24/react-viket:latest
     restart: always
     ports:
@@ -48,7 +48,7 @@ services:
       context: ./time-table-manager
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:89/time-table-manager
+        - API_URL=http://ryuichi24.com:89/time-table-manager
     image: ryuichi24/react-time-table-manager:latest
     restart: always
     ports:

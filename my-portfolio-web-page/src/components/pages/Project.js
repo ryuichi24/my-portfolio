@@ -19,7 +19,7 @@ const Project = () => {
                              <h2 className="project-name">Youtube Link Manager</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>hello</p>
+                            <p>Youtube video link manager built with React/Interact with flask api to manage data and authentication</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/video-link-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                                 <span>|</span>
@@ -33,7 +33,7 @@ const Project = () => {
                             <h2 className="project-name">Api For Youtube Link Manager</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>hello</p>
+                            <p>Flask api intereacting with MySQL database/ORM SQLAlchemy/JWT authentication/Nginx reverse proxy</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/api-video-link-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                             </div>
@@ -45,7 +45,7 @@ const Project = () => {
                              <h2 className="project-name">Time Table Manager</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>Time table sharing app built with React/Interact with Api to manage data and authentication</p>
+                            <p>Time table sharing app built with React/Interact with express api to manage data and authentication</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/time-table-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                                 <span>|</span>
@@ -59,7 +59,7 @@ const Project = () => {
                             <h2 className="project-name">Api For Time Table Manager</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>Api intereacting with MySQL database/JWT authentication</p>
+                            <p>Express api intereacting with MySQL database/JWT authentication/Nginx reverse proxy</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/api-time-table-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                             </div>
@@ -74,6 +74,18 @@ const Project = () => {
                             <p>Console app built with .NET Core managing students and thier modules data/EntityFrameWork/MS SQL Server</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/student-module-management-system'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="project-item">
+                        <div className="project-item-image project-six">
+                            <h2 className="project-name">My Portfolio</h2>
+                        </div>
+                        <div className="project-item-detail">
+                            <p>Multiple docker containers handled by docker compose/Deployed on VPS</p>
+                            <div className="project-link-container">
+                                <a className="link project-link" href={'https://github.com/ryuichi24/my-portfolio'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                             </div>
                         </div>
                     </div>

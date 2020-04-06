@@ -68,9 +68,8 @@ const DetailCV = () => {
                             <li>Express, Node.js</li>
                             <li>Flask, python</li>
                             <li>.NET Core, C#</li>
-                            <li>Flutter, Dart</li>
                             <li>MySQL, MS SQL Server</li>
-                            <li>Docker</li>
+                            <li>Docker, Docker Compose</li>
                         </ul>
                     </div>
                 </div>

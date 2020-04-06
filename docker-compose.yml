@@ -7,12 +7,12 @@ services:
       context: ./my-portfolio-web-page
       dockerfile: Dockerfile
       args:
-        - PROJECT_URL_ONE=http://localhost:3010
-        - PROJECT_URL_TWO=http://localhost:3020
+        - PROJECT_URL_ONE=http://viket.ryuichi24.com/
+        - PROJECT_URL_TWO=http://tible.ryuichi24.com/
     image: ryuichi24/react-web-page:latest
     restart: always
     ports:
-      - 3000:80
+      - 3000:88
 
 
   #video link manager
@@ -21,7 +21,7 @@ services:
       context: ./video-link-manager
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:3010
+        - API_URL=http://localhost:89/video-link-manager
     image: ryuichi24/react-viket:latest
     restart: always
     ports:
@@ -29,14 +29,14 @@ services:
 
   #flask api for video link manager
   flask:
-    image: ryuichi24/flask-api-viket:latest
+    image: ryuichi24/flask-api-video-link-manager:latest
     restart: always
     container_name: flask
     environment:
       SECRET_KEY: love-programming
       JWT_SECRET_KEY: love-programming-jwt
       DATABASE_URL: mysql+pymysql://ryuichi:love-programming@mysql/ryuichiDb
-      CLIENT_ORIGIN: http://localhost:3010
+      CLIENT_ORIGIN: '*'
     command: /bin/sh -c "./boot.sh"
     ports:
       - 5001:5000
@@ -48,7 +48,7 @@ services:
       context: ./time-table-manager
       dockerfile: Dockerfile
       args:
-        - API_URL=http://localhost:3020
+        - API_URL=http://localhost:89/time-table-manager
     image: ryuichi24/react-time-table-manager:latest
     restart: always
     ports:
@@ -67,7 +67,7 @@ services:
       DB_HOST: mysql
       DB_PORT: 3306
       JWT_KEY: love-programming
-      CLIENT_ORIGIN: http://localhost:3020
+      CLIENT_ORIGIN: '*'
     ports:
       - 5002:5010
 
@@ -87,3 +87,24 @@ services:
       MYSQL_DATABASE: ryuichiDb
       MYSQL_USER: ryuichi
       MYSQL_PASSWORD: love-programming
+
+
+  nginx-api:
+    image: nginx:alpine
+    restart: always
+    container_name: nginx-api
+    ports:
+      - 89:89
+    volumes:
+      - ./nginx-api/nginx-reverse-api.conf:/etc/nginx/conf.d/default.conf
+
+
+  nginx-front:
+    image: nginx:alpine
+    restart: always
+    container_name: nginx-front
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx-front:/etc/nginx/conf.d

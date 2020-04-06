@@ -1,7 +1,7 @@
 .detail-cv-container {
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 750px;
     width: 650px;
     margin: 0 30px;
     border-radius: 10px;
@@ -39,6 +39,7 @@
 .skill {
     display: flex;
     flex-direction: row-reverse;
+    margin-bottom: 30px;
 }
 
 .skill-content {

@@ -45,10 +45,6 @@ COPY --from=builder /app/my-portfolio-web-page/build /var/www/portfolio.ryuichi2
 COPY --from=builder /app/video-link-manager/build /var/www/viket.ryuichi24.com/html
 COPY --from=builder /app/time-table-manager/build /var/www/table.ryuichi24.com/html
 
-COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY ./nginx/portfolio.ryuichi24.conf /etc/nginx/conf.d/
-COPY ./nginx/table.ryuichi24.conf /etc/nginx/conf.d/
-COPY ./nginx/viket.ryuichi24.conf /etc/nginx/conf.d/
 
 EXPOSE 80
 

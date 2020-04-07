@@ -45,6 +45,7 @@ services:
     volumes:
       - ./mysql/mysql-auth.cnf:/etc/mysql/conf.d/mysql-auth.cnf
       - ./mysql/time-table-manager.sql:/docker-entrypoint-initdb.d/time-table-manager.sql
+      - ./mysql/mysql_data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: love-programming
       MYSQL_DATABASE: ryuichiDb
@@ -70,3 +71,5 @@ services:
     ports:
       - 80:80
       - 443:443
+    volumes:
+      - ./nginx:/etc/nginx/conf.d

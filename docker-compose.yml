@@ -63,9 +63,9 @@ services:
         - PROJECT_URL_ONE=https://viket.ryuichi24.com/
         - PROJECT_URL_TWO=https://table.ryuichi24.com/
         #video link manager env
-        - API_URL_VIDEO=https://ryuichi24.com:80/video-link-manager
+        - API_URL_VIDEO=https://ryuichi24.com/video-link-manager
         #time table manager env
-        - API_URL_TABLE=https://ryuichi24.com:80/time-table-manager
+        - API_URL_TABLE=https://ryuichi24.com/time-table-manager
     restart: always
     container_name: nginx
     ports:

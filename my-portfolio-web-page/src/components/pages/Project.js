@@ -33,7 +33,7 @@ const Project = () => {
                             <h2 className="project-name">Api For Youtube Link Manager</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>Flask api intereacting with MySQL database/ORM SQLAlchemy/JWT authentication/Nginx reverse proxy</p>
+                            <p>Flask api intereacting with MySQL database/ORM SQLAlchemy/JWT authentication</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/api-video-link-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                             </div>
@@ -59,7 +59,7 @@ const Project = () => {
                             <h2 className="project-name">Api For Time Table Manager</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>Express api intereacting with MySQL database/JWT authentication/Nginx reverse proxy</p>
+                            <p>Express api intereacting with MySQL database/JWT authentication</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/api-time-table-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                             </div>
@@ -83,7 +83,7 @@ const Project = () => {
                             <h2 className="project-name">My Portfolio</h2>
                         </div>
                         <div className="project-item-detail">
-                            <p>Multiple docker containers handled by docker compose/Deployed on VPS</p>
+                            <p>Docker compose/Nginx reverse proxy for api and multiple web hosting/Deployed on VPS</p>
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/my-portfolio'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                             </div>

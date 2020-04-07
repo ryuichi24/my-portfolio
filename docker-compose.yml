@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
       args:
         - PROJECT_URL_ONE=http://viket.ryuichi24.com/
-        - PROJECT_URL_TWO=http://tible.ryuichi24.com/
+        - PROJECT_URL_TWO=http://table.ryuichi24.com/
     image: ryuichi24/react-web-page:latest
     restart: always
     ports:

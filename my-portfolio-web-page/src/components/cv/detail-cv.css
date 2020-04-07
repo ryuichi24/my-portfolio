@@ -10,8 +10,16 @@
     padding: 30px;
 }
 
+.detail-cv-education-container h2 {
+    margin-bottom: 10px;
+}
+
 .detail-cv-work-container {
     margin-top: 10px;
+}
+
+.detail-cv-work-container h2 {
+    margin-bottom: 10px;
 }
 
 .detail-cv-skill-container {

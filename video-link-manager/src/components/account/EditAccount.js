@@ -6,6 +6,8 @@ import { apiBaseUrl } from '../../config';
 import { faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import './edit-account.css';
+
 
 
 const EditUserProfile = () => {

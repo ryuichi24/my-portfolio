@@ -1,6 +1,6 @@
 #!/bin/sh
 
-certbot certonly -n -d ryuichi24.com,portfolio.ryuichi24.com,viket.ryuichi24.com,table.ryuichi24.com \
+certbot certonly -n -d ryuichinishi.com,portfolio.ryuichinishi.com,viket.ryuichinishi.com,table.ryuichinishi.com \
   --standalone --preferred-challenges http --email ryuichi.nishi24@gmail.com --agree-tos --expand
 
 

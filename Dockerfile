@@ -41,9 +41,9 @@ RUN npm run build
 FROM nginx:alpine
 
 #copy each artifact of react apps
-COPY --from=builder /app/my-portfolio-web-page/build /var/www/portfolio.ryuichi24.com/html
-COPY --from=builder /app/video-link-manager/build /var/www/viket.ryuichi24.com/html
-COPY --from=builder /app/time-table-manager/build /var/www/table.ryuichi24.com/html
+COPY --from=builder /app/my-portfolio-web-page/build /var/www/portfolio.ryuichinishi.com/html
+COPY --from=builder /app/video-link-manager/build /var/www/viket.ryuichinishi.com/html
+COPY --from=builder /app/time-table-manager/build /var/www/table.ryuichinishi.com/html
 
 
 #prepare for https setting

@@ -54,7 +54,7 @@ RUN chmod +x /etc/periodic/daily/renew
 RUN mkdir /var/lib/certbot
 
 COPY ./nginx/entrypoint.certbot.sh ./entrypoint.certbot.sh
-RUN chmod +x ./entrypoint.sh
+RUN chmod +x ./entrypoint.certbot.sh
 
 
 EXPOSE 80

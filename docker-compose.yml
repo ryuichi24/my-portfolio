@@ -72,4 +72,5 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./nginx:/etc/nginx/conf.d
+      - ./nginx/config:/etc/nginx/conf.d
+      - ./nginx/letsencrypt:/ets/letsencrypt

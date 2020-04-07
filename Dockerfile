@@ -46,7 +46,17 @@ COPY --from=builder /app/video-link-manager/build /var/www/viket.ryuichi24.com/h
 COPY --from=builder /app/time-table-manager/build /var/www/table.ryuichi24.com/html
 
 
+#prepare for https setting
+RUN apk add --no-cache certbot
+
+COPY ./nginx/renew /etc/periodic/daily/renew
+RUN chmod +x /etc/periodic/daily/renew
+RUN mkdir /var/lib/certbot
+
+COPY ./nginx/entrypoint.sh ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
+
+
 EXPOSE 80
 
-ENTRYPOINT ["nginx"]
-CMD ["-g", "daemon off;"]
+ENTRYPOINT [ "./entrypoint.certbot.sh" ]

@@ -9,4 +9,4 @@ certbot certonly -n -d ryuichi24.com,portfolio.ryuichi24.com,viket.ryuichi24.com
 
 
 # Start nginx
-/usr/sbin/nginx -g "daemon off;"
+nginx -g daemon off;

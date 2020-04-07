@@ -11,7 +11,7 @@ services:
       SECRET_KEY: love-programming
       JWT_SECRET_KEY: love-programming-jwt
       DATABASE_URL: mysql+pymysql://ryuichi:love-programming@mysql/ryuichiDb
-      CLIENT_ORIGIN: '*'
+      CLIENT_ORIGIN: http://viket.ryuichi24.com
     command: /bin/sh -c "./boot.sh"
     ports:
       - 5001:5000
@@ -30,7 +30,7 @@ services:
       DB_HOST: mysql
       DB_PORT: 3306
       JWT_KEY: love-programming
-      CLIENT_ORIGIN: '*'
+      CLIENT_ORIGIN: http://table.ryuichi24.com
     ports:
       - 5002:5010
 

@@ -53,7 +53,7 @@ COPY ./nginx/renew /etc/periodic/daily/renew
 RUN chmod +x /etc/periodic/daily/renew
 RUN mkdir /var/lib/certbot
 
-COPY ./nginx/entrypoint.sh ./entrypoint.sh
+COPY ./nginx/entrypoint.certbot.sh ./entrypoint.certbot.sh
 RUN chmod +x ./entrypoint.sh
 
 

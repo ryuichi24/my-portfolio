@@ -1,7 +1,7 @@
 .detail-cv-container {
     display: flex;
     flex-direction: column;
-    height: 750px;
+    height: 800px;
     width: 650px;
     margin: 0 30px;
     border-radius: 10px;

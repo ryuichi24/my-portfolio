@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import './home.css';
 
-const Home = () => {
+const Home = (props) => {
+    useEffect(() => {
+        document.title = `Home`;
+        window.gtagPageview(props.location.pathname);
+
+        // change description and rich result for SEO
+        //do things...
+      }, [props.location.pathname]);
+
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      });
     return (
         <div className="home-container">
             <div className="home-main">

@@ -11,7 +11,6 @@ import Project from './components/pages/Project';
 import CV from './components/pages/CV';
 
 
-
 function App() {
   return (
     <div className="app">

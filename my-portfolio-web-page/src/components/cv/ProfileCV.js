@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { faLinkedin , faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkerAlt , faMobileAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt , faMobileAlt, faEnvelope, faFile,  faDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -35,6 +35,17 @@ const ProfileCV = () => {
                     <div className="contact-detail-wrapper">
                         <FontAwesomeIcon className="font-awesome-contact email" icon={faEnvelope}/>
                         <p>ryuichi.nishi24@gmail.com</p>
+                    </div>
+                    <div className="contact-detail-wrapper">
+                        <FontAwesomeIcon className="font-awesome-contact email" icon={faFile}/>
+                        <button className="cv-btn link">
+                            <a href="/cv/CV-Ryuichi-Nishi.pdf" download style={{textDecoration: "none"}}>
+                                <span className="get-my-cv">
+                                    <FontAwesomeIcon className="font-awesome-contact download" icon={faDownload}/>
+                                    Get My CV
+                                </span>
+                            </a>
+                        </button>
                     </div>
                 </div>
             </div>

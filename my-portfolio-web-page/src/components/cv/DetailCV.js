@@ -70,6 +70,7 @@ const DetailCV = () => {
                             <li>.NET Core, C#</li>
                             <li>MySQL, MS SQL Server</li>
                             <li>Docker, Docker Compose</li>
+                            <li>Google Analytics (with Google Analytics Individual Qualification)</li>
                         </ul>
                     </div>
                 </div>

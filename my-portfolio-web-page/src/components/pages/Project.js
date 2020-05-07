@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './project.css';
 
@@ -7,7 +7,18 @@ import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const Project = () => {
+const Project = (props) => {
+    useEffect(() => {
+        document.title = `Projects`;
+        window.gtagPageview(props.location.pathname);
+
+        // change description and rich result for SEO
+        //do things...
+      }, [props.location.pathname]);
+
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      });
     return (
         <div className="project-container">
             <div className="project-main">

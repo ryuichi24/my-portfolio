@@ -14,6 +14,19 @@ const Project = () => {
                 <h1>My Projects</h1>
 
                 <div className="project-item-container">
+                <div className="project-item">
+                        <div className="project-item-image project-seven">
+                             <h2 className="project-name">Nextjs Blog</h2>
+                        </div>
+                        <div className="project-item-detail">
+                            <p>My personal blog built with Nextjs, Apollo, and Strapi as a headless CMS</p>
+                            <div className="project-link-container">
+                                <a className="link project-link" href={'https://github.com/ryuichi24/my-blog'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
+                                <span>|</span>
+                                <a className="link project-link" href={process.env.REACT_APP_PROJECT_URL_ONE}><FontAwesomeIcon className="font-awesome" icon={faLink}/>App</a>
+                            </div>
+                        </div>
+                    </div>
                     <div className="project-item">
                         <div className="project-item-image project-one">
                              <h2 className="project-name">Youtube Link Manager</h2>
@@ -23,7 +36,7 @@ const Project = () => {
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/video-link-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                                 <span>|</span>
-                                <a className="link project-link" href={process.env.REACT_APP_PROJECT_URL_ONE}><FontAwesomeIcon className="font-awesome" icon={faLink}/>App</a>
+                                <a className="link project-link" href={process.env.REACT_APP_PROJECT_URL_TWO}><FontAwesomeIcon className="font-awesome" icon={faLink}/>App</a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +62,7 @@ const Project = () => {
                             <div className="project-link-container">
                                 <a className="link project-link" href={'https://github.com/ryuichi24/time-table-manager'}><FontAwesomeIcon className="font-awesome" icon={faGithub}/>Github</a>
                                 <span>|</span>
-                                <a className="link project-link" href={process.env.REACT_APP_PROJECT_URL_TWO}><FontAwesomeIcon className="font-awesome" icon={faLink}/>App</a>
+                                <a className="link project-link" href={process.env.REACT_APP_PROJECT_URL_THREE}><FontAwesomeIcon className="font-awesome" icon={faLink}/>App</a>
                             </div>
                         </div>
                     </div>

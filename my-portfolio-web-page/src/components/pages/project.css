@@ -82,6 +82,12 @@
     background-size: cover;
 }
 
+.project-seven {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../img/blog-img.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
 .project-item-detail {
     background-color: rgba(255, 255, 255, 0.934);
     height: 40%;
